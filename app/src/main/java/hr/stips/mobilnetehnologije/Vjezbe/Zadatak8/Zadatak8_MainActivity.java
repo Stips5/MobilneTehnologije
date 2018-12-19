@@ -1,4 +1,4 @@
-package hr.stips.mobilnetehnologije.Predavanja.Predavanje8;
+package hr.stips.mobilnetehnologije.Vjezbe.Zadatak8;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -21,20 +21,22 @@ import java.util.ArrayList;
 
 import hr.stips.mobilnetehnologije.R;
 
-public class Predavanje8_MainActivity extends AppCompatActivity {
+public class Zadatak8_MainActivity extends AppCompatActivity {
 
     /*
-    * preuzimanje jsona file i ucitavanje slika iz njega u recycleview
-    * */
+     * Proširiti primjer s predavanja na sljedeći način: napraviti svaku ćeliju RecyclerView-a
+     * klikabilnom. Prilikom klika na ćeliju otvara se novi Activity koji preko cijelog ekrana
+     * učitava istu sliku iz ćelije koristeći ImageRequest iz paketa Volley.
+     * */
 
-    ArrayList<Rvdata> proSearch = new ArrayList<Rvdata>();
+    ArrayList<Rvdata> proSearch = new ArrayList<>();
     RecyclerView rvTechSolPoint;//handler na recyclerView
     RvAdapter rvAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.p8_activity_main);
+        setContentView(R.layout.zadatak_9_activity_main);
 
         rvTechSolPoint = findViewById(R.id.rv_techsolpoint);
         rvTechSolPoint.setHasFixedSize(true);
