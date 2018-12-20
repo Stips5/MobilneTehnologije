@@ -21,7 +21,7 @@ public class Zadatak8_NewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.zadatak_9_activity_new);
+        setContentView(R.layout.zadatak_8_activity_new);
 
         url = getIntent().getStringExtra("Position");
 

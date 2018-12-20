@@ -36,7 +36,7 @@ public class Zadatak8_MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.zadatak_9_activity_main);
+        setContentView(R.layout.zadatak_8_activity_main);
 
         rvTechSolPoint = findViewById(R.id.rv_techsolpoint);
         rvTechSolPoint.setHasFixedSize(true);

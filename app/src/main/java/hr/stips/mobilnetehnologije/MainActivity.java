@@ -18,6 +18,7 @@ import hr.stips.mobilnetehnologije.Predavanja.Predavanje5.Predavanje5_MainActivi
 import hr.stips.mobilnetehnologije.Predavanja.Predavanje6.Predavanje6_MainActivity;
 import hr.stips.mobilnetehnologije.Predavanja.Predavanje7.Predavanje7_MainActivity;
 import hr.stips.mobilnetehnologije.Predavanja.Predavanje8.Predavanje8_MainActivity;
+import hr.stips.mobilnetehnologije.Predavanja.Predavanje9.Predavanje9_MainActivity;
 import hr.stips.mobilnetehnologije.Vjezbe.Zadatak1.Zadatak1_MainActivity;
 import hr.stips.mobilnetehnologije.Vjezbe.Zadatak2.Zadatak2_MainActivity;
 import hr.stips.mobilnetehnologije.Vjezbe.Zadatak3.Zadatak3_MainActivity;
@@ -29,6 +30,9 @@ import hr.stips.mobilnetehnologije.Vjezbe.Zadatak8.Zadatak8_MainActivity;
 import hr.stips.mobilnetehnologije.Vjezbe.Zadatak9.Zadatak9_MainActivity;
 
 public class MainActivity extends AppCompatActivity{
+
+    //TODO Vjezbe zadatak 7 i zadatak 9
+    //TODO remapirat vjezbe i predavanja
 
     private static final String TAG = "MainActivity";
     ListView vjezbeLW;
@@ -71,6 +75,7 @@ public class MainActivity extends AppCompatActivity{
         intentoviPredavanja.add(new Intent(getApplicationContext(), Predavanje6_MainActivity.class));
         intentoviPredavanja.add(new Intent(getApplicationContext(), Predavanje7_MainActivity.class));
         intentoviPredavanja.add(new Intent(getApplicationContext(), Predavanje8_MainActivity.class));
+        intentoviPredavanja.add(new Intent(getApplicationContext(), Predavanje9_MainActivity.class));
     }
 
     @Override

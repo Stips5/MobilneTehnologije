@@ -3,7 +3,14 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="hr.stips.mobilnetehnologije">
 
+
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-feature android:name="android.hardware.location.network" />
 
     <application
         android:allowBackup="true"
@@ -13,9 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity">
 
-        <!--<activity android:name=".Vjezbe.Zadatak5.Zadatak5_MainActivity">-->
+        <!--<activity android:name=".MainActivity">-->
+        <activity android:name=".Vjezbe.Zadatak9.Zadatak9_MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -24,23 +31,35 @@
 
         </activity>
 
-        <activity android:name=".Vjezbe.Zadatak1.Zadatak1_MainActivity"/>
-        <activity android:name=".Vjezbe.Zadatak2.Zadatak2_MainActivity"/>
-        <activity android:name=".Vjezbe.Zadatak3.Zadatak3_MainActivity"/>
-        <activity android:name=".Vjezbe.Zadatak4.Display_database"/>
-        <activity android:name=".Vjezbe.Zadatak4.Card_view_activity"/>
-        <activity android:name=".Vjezbe.Zadatak4.Prosirenje"/>
-        <activity android:name=".Vjezbe.Zadatak4.Zadatak4_MainActivity"/>
-        <activity android:name=".Vjezbe.Zadatak5.Zadatak5_MainActivity"/>
+            <activity android:name=".Vjezbe.Zadatak1.Zadatak1_MainActivity"/>
+            <activity android:name=".Vjezbe.Zadatak2.Zadatak2_MainActivity"/>
+            <activity android:name=".Vjezbe.Zadatak3.Zadatak3_MainActivity"/>
+            <activity android:name=".Vjezbe.Zadatak4.Display_database"/>
+            <activity android:name=".Vjezbe.Zadatak4.Card_view_activity"/>
+            <activity android:name=".Vjezbe.Zadatak4.Prosirenje"/>
+            <activity android:name=".Vjezbe.Zadatak4.Zadatak4_MainActivity"/>
+            <activity android:name=".Vjezbe.Zadatak5.Zadatak5_MainActivity"/>
+            <activity android:name=".Vjezbe.Zadatak6.Zadatak6_MainActivity"/>
+            <activity android:name=".Vjezbe.Zadatak7.Zadatak7_MainActivity"/>
+            <activity android:name=".Vjezbe.Zadatak8.Zadatak8_MainActivity"/>
+            <activity android:name=".Vjezbe.Zadatak8.Zadatak8_NewActivity"/>
 
-        <activity android:name=".Predavanja.Predavanje1.Predavanje1_MainActivity"/>
-        <activity android:name=".Predavanja.Predavanje2.Predavanje2_MainActivity"/>
-        <activity android:name=".Predavanja.Predavanje3.Predavanje3_MainActivity"/>
-        <activity android:name=".Predavanja.Predavanje4.Predavanje4_MainActivity"/>
-        <activity android:name=".Predavanja.Predavanje4.Card_view_activity"/>
-        <activity android:name=".Predavanja.Predavanje4.Display_database"/>
-        <activity android:name=".Predavanja.Predavanje5.Predavanje5_MainActivity"/>
+            <!--<activity android:name=".Vjezbe.Zadatak9.Zadatak9_MainActivity"/>-->
 
-    </application>
+
+            <activity android:name=".Predavanja.Predavanje1.Predavanje1_MainActivity"/>
+            <activity android:name=".Predavanja.Predavanje2.Predavanje2_MainActivity"/>
+            <activity android:name=".Predavanja.Predavanje3.Predavanje3_MainActivity"/>
+            <activity android:name=".Predavanja.Predavanje4.Predavanje4_MainActivity"/>
+            <activity android:name=".Predavanja.Predavanje4.Card_view_activity"/>
+            <activity android:name=".Predavanja.Predavanje4.Display_database"/>
+            <activity android:name=".Predavanja.Predavanje5.Predavanje5_MainActivity"/>
+            <activity android:name=".Predavanja.Predavanje6.Predavanje6_MainActivity"/>
+            <activity android:name=".Predavanja.Predavanje7.Predavanje7_MainActivity"/>
+            <activity android:name=".Predavanja.Predavanje8.Predavanje8_MainActivity"/>
+            <activity android:name=".Predavanja.Predavanje8.Predavanje8_NewActivity"/>
+            <activity android:name=".Predavanja.Predavanje9.Predavanje9_MainActivity"/>
+
+        </application>
 
 </manifest>
