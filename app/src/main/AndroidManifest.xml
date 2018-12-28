@@ -21,8 +21,8 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <!--<activity android:name=".MainActivity">-->
-        <activity android:name=".Vjezbe.Zadatak9.Zadatak9_MainActivity">
+        <activity android:name=".MainActivity">
+        <!--<activity android:name=".Vjezbe.Zadatak9.Zadatak9_MainActivity">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -43,8 +43,7 @@
             <activity android:name=".Vjezbe.Zadatak7.Zadatak7_MainActivity"/>
             <activity android:name=".Vjezbe.Zadatak8.Zadatak8_MainActivity"/>
             <activity android:name=".Vjezbe.Zadatak8.Zadatak8_NewActivity"/>
-
-            <!--<activity android:name=".Vjezbe.Zadatak9.Zadatak9_MainActivity"/>-->
+            <activity android:name=".Vjezbe.Zadatak9.Zadatak9_MainActivity"/>
 
 
             <activity android:name=".Predavanja.Predavanje1.Predavanje1_MainActivity"/>
