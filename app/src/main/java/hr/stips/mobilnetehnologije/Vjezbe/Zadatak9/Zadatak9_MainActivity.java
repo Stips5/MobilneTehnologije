@@ -1,82 +1,166 @@
 package hr.stips.mobilnetehnologije.Vjezbe.Zadatak9;
 
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-import com.google.gson.Gson;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
+import android.util.Log;
+import android.view.View;
+import android.view.animation.OvershootInterpolator;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
+import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import hr.stips.mobilnetehnologije.R;
 
 public class Zadatak9_MainActivity extends AppCompatActivity {
 
-    ArrayList<Rvdata> proSearch = new ArrayList<Rvdata>();
-    RecyclerView rvTechSolPoint;//handler na recyclerView
-    RvAdapter rvAdapter;
+//    animacije
+
+    ImageButton imageButton;
+    ConstraintLayout clNaslov;
+    RelativeLayout rlDescription;
+    TextView tapForInfo;
+    TextView descriptionTextView;
+    RelativeLayout relativeLayout;
+    boolean descriptionIn = false;
+    int duration = 900;
+    private static final String TAG = "Zadatak9_MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.zadatak_9_activity_main);
+        setContentView(R.layout.zadatak_9_activity);
 
-        rvTechSolPoint = findViewById(R.id.rv_techsolpoint);
-        rvTechSolPoint.setHasFixedSize(true);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
-        rvTechSolPoint.setLayoutManager(layoutManager);
+        imageButton = findViewById(R.id.imageView);
+        tapForInfo = findViewById(R.id.tapToInfoTextView);
+        descriptionTextView = findViewById(R.id.opisTextView);
+        clNaslov = findViewById(R.id.naslovConstrainLayout);
+        relativeLayout = findViewById(R.id.relativeLayout);
+        rlDescription = findViewById(R.id.descriptionRelativeLayout);
 
-        getServerData();
+        clNaslov.setVisibility(View.GONE);
+        descriptionTextView.setVisibility(View.GONE);
     }
 
-    private void getServerData(){
-        String urlGetServerData = "http://www.techsolpoint.com/api_example/api.json";
-        System.out.print(urlGetServerData);
 
-        //json object sa dva objekta u funkciji call back-a
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, urlGetServerData, null, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                System.out.println(response);
+    void animateSlideIn()
+    {
+        //slide title and description to view
 
-                try {
-                    Gson gson = new Gson();
-                    JSONArray jsonArray = response.getJSONArray("list");//parsiranje JSON-a
+        TranslateAnimation slideDescription = new TranslateAnimation(
+                0,
+                0,
+                0,
+                descriptionTextView.getHeight());
+        slideDescription.setDuration(duration);
+        slideDescription.setFillEnabled(true);
+        slideDescription.setFillAfter(true);
+        slideDescription.setInterpolator(new OvershootInterpolator());
 
-                    for (int p = 0; p < jsonArray.length(); p++) {
-                        JSONObject jsonObject = jsonArray.getJSONObject(p);
-                        Rvdata rvdata = gson.fromJson(String.valueOf(jsonObject), Rvdata.class);//This method deserializes the Json read from the specified parse tree into an object of the specified type.
-                        proSearch.add(rvdata);
-                    }
+        TranslateAnimation slideTitle = new TranslateAnimation(
+                0,
+                -clNaslov.getWidth(),
+                0,
+                0
+        );
+        slideTitle.setDuration(duration);
+        slideTitle.setFillEnabled(true);
+        slideTitle.setFillAfter(true);
+        slideTitle.setInterpolator(new OvershootInterpolator());
 
-                    rvAdapter = new RvAdapter(getApplicationContext(), proSearch);
-                    rvTechSolPoint.setAdapter(rvAdapter);//gotov adapter se stavi na adapter view
+        ScaleAnimation imageAnimation = new ScaleAnimation(
+                1.1f,
+                1,
+                1.1f,
+                1
+        );
+        imageAnimation.setDuration(250);
+        imageAnimation.setFillEnabled(true);
+        imageAnimation.setFillAfter(true);
+
+        rlDescription.startAnimation(slideDescription);
+        clNaslov.startAnimation(slideTitle);
+        imageButton.startAnimation(imageAnimation);
+
+        tapForInfo.setVisibility(View.VISIBLE);
+        clNaslov.setVisibility(View.VISIBLE);
+        descriptionTextView.setVisibility(View.VISIBLE);
+
+        Log.d(TAG, "animateSlideIn: Animation");
+    }
+
+    void animateSlideOut()
+    {
+        //slide title and description off view
+
+        TranslateAnimation slideDescription = new TranslateAnimation(
+                0,
+                0,
+                descriptionTextView.getHeight(),
+                0);
+        slideDescription.setDuration(duration);
+        slideDescription.setFillEnabled(true);
+        slideDescription.setFillAfter(true);
+        slideDescription.setInterpolator(new OvershootInterpolator());
+
+        TranslateAnimation slideTitle = new TranslateAnimation(
+                -clNaslov.getWidth(),
+                0,
+                0,
+                0
+        );
+        slideTitle.setDuration(duration);
+        slideTitle.setFillEnabled(true);
+        slideTitle.setFillAfter(true);
+        slideTitle.setInterpolator(new OvershootInterpolator());
+
+        ScaleAnimation imageAnimation = new ScaleAnimation(
+                1,
+                1.1f,
+                1,
+                1.1f
+        );
+        imageAnimation.setDuration(250);
+        imageAnimation.setFillEnabled(true);
+        imageAnimation.setFillAfter(true);
+
+        rlDescription.startAnimation(slideDescription);
+        clNaslov.startAnimation(slideTitle);
+        imageButton.startAnimation(imageAnimation);
+
+        tapForInfo.setVisibility(View.GONE);
+        clNaslov.setVisibility(View.VISIBLE);
+        descriptionTextView.setVisibility(View.VISIBLE);
+
+        Log.d(TAG, "animateSlideOut: Animation");
+    }
 
 
-                } catch (JSONException e) {//ako je neuspjelo parsiranje
-                    e.printStackTrace();
-                }
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+//        TranslateAnimation animation = new TranslateAnimation(0.0f, 0.0f,0.0f, 0);
+//        animation.setDuration(3000);
+//        animation.setFillAfter(true);
+//
+//        animation.start();  // start animation
+
+        imageButton.setOnClickListener(v -> {
+            if (descriptionIn)
+            {
+                animateSlideOut();
+                descriptionIn = false;
             }
-        }, new Response.ErrorListener() {//ako je neuspjeo response-a
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                System.out.println(error.toString());
+            else
+            {
+                animateSlideIn();
+                descriptionIn = true;
             }
         });
 
-        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());//jedan (ili koji vise) thread za potencialni veci broj istovremenih requestova, ali se stave u red i sljedno se prazne
-        requestQueue.add(jsonObjectRequest);
 
     }
 }

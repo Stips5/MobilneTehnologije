@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/relativeLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/golf_germ"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/naslovConstrainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        >
+
+        <TextView
+            android:id="@+id/naslovTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginVertical="16dp"
+            android:background="#f35500"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/im_u_germ"
+            android:textColor="#FFF"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/datumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#c7bdbd"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/_13_prosinca_2018"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/naslovTextView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/naslovTextView"
+            app:layout_constraintVertical_bias="0.0"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/descriptionRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tapToInfoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/opisTextView"
+            android:background="#171515"
+            android:gravity="center"
+            android:text="@string/tap_for_info"
+            android:textColor="#FFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/opisTextView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#171515"
+            android:gravity="center"
+            android:text="@string/pajdo_iz_imotskoga_do_a_u_njema_ku_sa_golfom_jedinicom"
+            android:textColor="#FFF"
+            android:layout_alignParentBottom="true"
+            android:textSize="24sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
