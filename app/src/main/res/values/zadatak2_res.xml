@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="auta">
+        <item>bmw</item>
+        <item>kia</item>
+        <item>lexus</item>
+        <item>volvo</item>
+    </string-array>
+
+    <string-array name="modeli_bmw">
+        <item>serija 1</item>
+        <item>serija 3</item>
+        <item>serija 5</item>
+        <item>serija 7</item>
+    </string-array>
+
+    <string-array name="modeli_kia">
+        <item>ceed</item>
+        <item>rio</item>
+    </string-array>
+
+    <string-array name="modeli_lexus">
+        <item>sa</item>
+        <item>rdsio</item>
+    </string-array>
+
+    <string-array name="modeli_volvo">
+        <item>c30</item>
+        <item>c40</item>
+        <item>c70</item>
+    </string-array>
+
+
+</resources>

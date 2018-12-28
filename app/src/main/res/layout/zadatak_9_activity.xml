@@ -71,22 +71,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/opisTextView"
-            android:background="#171515"
             android:gravity="center"
             android:text="@string/tap_for_info"
             android:textColor="#FFF"
             android:textSize="18sp"
+            android:background="#dd171515"
             android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/opisTextView"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="#171515"
+            android:layout_alignParentBottom="true"
+            android:background="#dd171515"
             android:gravity="center"
             android:text="@string/pajdo_iz_imotskoga_do_a_u_njema_ku_sa_golfom_jedinicom"
             android:textColor="#FFF"
-            android:layout_alignParentBottom="true"
             android:textSize="24sp"/>
 
     </RelativeLayout>

@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">MobilneTehnologije</string>
+    <string name="mobilne_tehnologije">Mobilne tehnologije</string>
+    <string name="tap_for_info">Tap for info</string>
+    <string name="pajdo_iz_imotskoga_do_a_u_njema_ku_sa_golfom_jedinicom">Pajdo iz imotskoga doša u Njemačku sa crnim golfom jedinicom</string>
+    <string name="im_u_germ">IM u GERM</string>
+    <string name="_13_prosinca_2018">13. Prosinca, 2018</string>
+
+
+    <string-array name="zadatci">
+        <item>1. Kalkulator</item>
+        <item>2. Spinners</item>
+        <item>3. Async Loader</item>
+        <item>4. DB filter</item>
+        <item>5. Budilica</item>
+        <item>6. GPS locator</item>
+        <item>7. Broadcast dvi aplikacije</item>
+        <item>8. Volley slike</item>
+        <item>9. Animacije</item>
+        <!--<item>zadatak 10</item>-->
+        <!--<item>zadatak 11</item>-->
+        <!--<item>zadatak 12</item>-->
+    </string-array>
+
+
+    <string-array name="predavanja">
+        <item>1. Osnovni widgeti</item>
+        <item>2. Spinner</item>
+        <item>3. Asinkrono</item>
+        <item>4. Room DB</item>
+        <item>5. Camera, fragments</item>
+        <item>6. GPS location info</item>
+        <item>7. Broadcast</item>
+        <item>8. Volley</item>
+        <item>9. Animacije</item>
+        <!--<item>10. Prijevod</item>-->
+        <!--<item>predavanje 10</item>-->
+        <!--<item>predavanje 11</item>-->
+        <!--<item>predavanje 12</item>-->
+    </string-array>
+</resources>
