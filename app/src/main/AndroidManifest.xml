@@ -5,7 +5,6 @@
 
 
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
-
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET" />
@@ -21,8 +20,8 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".MainActivity">
-        <!--<activity android:name=".Vjezbe.Zadatak9.Zadatak9_MainActivity">-->
+        <!--<activity android:name=".MainActivity">-->
+        <activity android:name=".Predavanja.Predavanje10.Predavanje10_MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -58,7 +57,11 @@
             <activity android:name=".Predavanja.Predavanje8.Predavanje8_MainActivity"/>
             <activity android:name=".Predavanja.Predavanje8.Predavanje8_NewActivity"/>
             <activity android:name=".Predavanja.Predavanje9.Predavanje9_MainActivity"/>
+            <!--<activity android:name=".Predavanja.Predavanje10.Predavanje10_MainActivity"/>-->
+            <activity android:name=".Predavanja.Predavanje10.Predavanje10_LoginActivity"/>
+        <activity android:name=".Vjezbe.Zadatak10.Zadatak10_LoginActivity"/>
+        <activity android:name=".Vjezbe.Zadatak10.Zadatak10_MainActivity"/>
 
-        </application>
+    </application>
 
 </manifest>

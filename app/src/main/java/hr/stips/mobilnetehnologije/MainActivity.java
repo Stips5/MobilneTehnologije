@@ -11,6 +11,7 @@ import android.widget.ListView;
 import java.util.Vector;
 
 import hr.stips.mobilnetehnologije.Predavanja.Predavanje1.Predavanje1_MainActivity;
+import hr.stips.mobilnetehnologije.Predavanja.Predavanje10.Predavanje10_MainActivity;
 import hr.stips.mobilnetehnologije.Predavanja.Predavanje2.Predavanje2_MainActivity;
 import hr.stips.mobilnetehnologije.Predavanja.Predavanje3.Predavanje3_MainActivity;
 import hr.stips.mobilnetehnologije.Predavanja.Predavanje4.Predavanje4_MainActivity;
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity{
         intentoviPredavanja.add(new Intent(getApplicationContext(), Predavanje7_MainActivity.class));
         intentoviPredavanja.add(new Intent(getApplicationContext(), Predavanje8_MainActivity.class));
         intentoviPredavanja.add(new Intent(getApplicationContext(), Predavanje9_MainActivity.class));
+        intentoviPredavanja.add(new Intent(getApplicationContext(), Predavanje10_MainActivity.class));
     }
 
     @Override
